@@ -6,7 +6,6 @@ local AquaShine = ...
 local ErrorHandler = {}
 
 function ErrorHandler.Start(arg)
-	print(AquaShine.LoadFont(nil, 14))
 	ErrorHandler.Msg = assert(arg[1])
 	
 	love.graphics.setFont(AquaShine.LoadFont(nil, 14))

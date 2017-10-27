@@ -285,7 +285,6 @@ function AquaShine.LoadVideo(path)
 		end
 	end
 	
-	print(a)
 	return nil, a
 end
 
@@ -570,11 +569,10 @@ function AquaShine.MainLoop()
 					dt = dt * 1000
 					AquaShine.CurrentEntryPoint.Update(dt)
 					
-					love.graphics.push()
+					love.graphics.push("all")
 					love.graphics.translate(AquaShine.LogicalScale.OffX, AquaShine.LogicalScale.OffY)
 					love.graphics.scale(AquaShine.LogicalScale.ScaleOverall)
 					AquaShine.CurrentEntryPoint.Draw(dt)
-					
 					love.graphics.pop()
 					love.graphics.setColor(255, 255, 255)
 				else
